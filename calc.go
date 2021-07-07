@@ -47,33 +47,74 @@ func main() {
 	var s *Stack = &Stack{}
 
 	var a string
+	a = "m"
 
 	for {
-		if sc.Split(bufio.ScanWords) !=  {
+		//if fmt.Scan(a) != 'm' {
 
-			switch a {
-			case '0' < a && a < '9':
-				s.push(strconv.Atoi(a))
-			case '+':
-				s.push(s.pop() + s.pop())
-				// 		case '*':
-				// 			push(pop() * pop())
-				// 		case '-':
-				// 			op2 = pop()
-				// 			push(pop() - op2)
-				// 		case '/':
-				// 			op2 = pop()
-				// 			if (op2 != 0.0) {
-				// 				push(pop() / op2)
-				// 			} else {
-				// 				printf("error: zero divisor\n")
-				// 			}
-				// 			case '\n':
-				// 				fmt.Println("\t%.8g\n", s.pop())
-			default:
-				fmt.Println("error: unknown command %s\n", a)
-			}
+		switch a {
+		case "1":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+		case "2":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "3":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "4":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "5":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "6":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "7":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "8":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "9":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "0":
+			tmp, _ := strconv.Atoi(a)
+			s.push(tmp)
+
+		case "m":
+			fmt.Println("Kimura")
+			return
+		case "+":
+			s.push(s.pop() + s.pop())
+			// 		case '*':
+			// 			push(pop() * pop())
+			// 		case '-':
+			// 			op2 = pop()
+			// 			push(pop() - op2)
+			// 		case '/':
+			// 			op2 = pop()
+			// 			if (op2 != 0.0) {
+			// 				push(pop() / op2)
+			// 			} else {
+			// 				printf("error: zero divisor\n")
+			// 			}
+			// 			case '\n':
+			// 				fmt.Println("\t%.8g\n", s.pop())
+		default:
+			fmt.Println("error: unknown command %s\n", a)
 		}
+		//}
 	}
 
 }
