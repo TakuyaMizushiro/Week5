@@ -13,7 +13,7 @@ func TestPlus01(t *testing.T) {
 	data.push(3)
 	data.push(8)
 	data.push("+")
-	if data.pop != 11 {
+	if data.pop() != 11 {
 		t.Errorf("....")
 	}
 }

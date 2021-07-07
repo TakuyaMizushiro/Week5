@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
-import "strconv"
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+)
+
+var sc = bufio.NewScanner(os.Stdin)
+
+var max int = 100000
 
 type Stack struct {
 	data []int
@@ -36,18 +44,18 @@ func (s *Stack) pop() int {
 
 func main() {
 
-	s := &Stack{
-		data: []int{0, 0, 0, 0, 0, 0, 0, 0, 0},
-	}
+	var s *Stack = &Stack{}
+
 	var a string
+
 	for {
-		if fmt.Scan(&a) != nil {
+		if sc.Split(bufio.ScanWords) !=  {
 
 			switch a {
-			case NUMBER:
-				push(atoi(data))
+			case '0' < a && a < '9':
+				s.push(strconv.Atoi(a))
 			case '+':
-				push(pop() + pop())
+				s.push(s.pop() + s.pop())
 				// 		case '*':
 				// 			push(pop() * pop())
 				// 		case '-':
@@ -60,10 +68,10 @@ func main() {
 				// 			} else {
 				// 				printf("error: zero divisor\n")
 				// 			}
-			case '\n':
-				printf("\t%.8g\n", pop())
+				// 			case '\n':
+				// 				fmt.Println("\t%.8g\n", s.pop())
 			default:
-				printf("error: unknown command %s\n", s)
+				fmt.Println("error: unknown command %s\n", a)
 			}
 		}
 	}
